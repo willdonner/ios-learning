@@ -29,11 +29,17 @@
     NSLog(@"%@", sampleProtocol.delegate);
     [_mytitle setText:@"Processing..."];
     [sampleProtocol startSampleProcess];
+     [self addTextField];
 }
 
 -(void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+-(void) addTextField{
+    NSLog(@"addTextField");
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(20, 50, 280, 30)];
+    [textField setText:@"2321312"];
 }
 
 #pragma mark - Sample protocol delegate
